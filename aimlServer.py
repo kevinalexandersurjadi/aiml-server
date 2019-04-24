@@ -57,6 +57,7 @@ def index(query):
         if tanggalBenar and jenis!=0 :
             date = tahun+'-'+bulan+'-'+tanggal
             #print(date)
+            king = 0
             twin = -1
             if jenis == 1:
                 room_type = str(32)
@@ -87,6 +88,7 @@ def index(query):
             message = message + ' adalah ' + str(king) + ' kamar King Size'
             if twin != -1:
                 message = message + ' dan ' + str(twin) + ' kamar Twin Size'
+            message = message + '" }'
             return message
         else:
             #Output salah
