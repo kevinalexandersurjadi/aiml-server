@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <!-- <get name="sedia"/> -->
+            <condition name="sedia">
+                <li value="kamar">
+                    Maaf, informasi mengenai <star/> belum tersedia. Silahkan menghubungi front office Santika Hotel Premiere untuk informasi lebih lanjut.
+                </li>
+                <li value="tanggal">
+                    <think><set name="tangal"><star index="1"/></set></think>
+                    <think><set name="sedia">malam</set></think>
+                    <srai>MALAM</srai>
+                </li>
+                <li value="malam">
+                    <think><set name="malam"><star index="1"/></set></think>
+                    <think><set name="sedia">banyak</set></think>
+                    <srai>BANYAK</srai>
+                </li>
+                <li value="banyak">
+                    <think><set name="banyak"><star index="1"/></set></think>
+                    <think><set name="sedia">sedia</set></think>
+                    [request] kamar <get name="kamar"/> tanggal <get name="tangal"/> malam <get name="malam"/> banyak <get name="banyak"/>
+                </li>
+                <li>
+                    Maaf, informasi mengenai <star/> belum tersedia. Silahkan menghubungi front office Santika Hotel Premiere untuk informasi lebih lanjut.
+                </li>
+            </condition>
+        </template>
+    </category>
+
+   <!-- Introduction -->
+    <category>
+        <pattern>HALO</pattern>
+        <template>
+            <think><set name="sedia">sedia</set></think>
+            <!-- Halo, Saya Chatbot yang akan membantu Anda menjelajahi informasi dan reservasi tentang: -->
+            Halo,  Saya Chatbot yang akan membantu Anda menjelajahi informasi dan reservasi tentang: 
+            [ul]
+                [li]Tentang Santika Premiere SLIPI[/li]
+                [li]Kamar Hotel[/li]
+                [li]Cek Ketersediaan Kamar[/li]
+                [li]Mengenai Reservasi[/li]
+                [li]Mengenai pembayaran[/li]
+                [li]Acara Pernikahan[/li]
+                [li]Ruangan Rapat[/li]
+                [li]Transportasi[/li]
+                [li]Restoran[/li]
+                [li]Fasilitas Lain.[/li]
+            [/ul]
+        </template>
+    </category>
+
+    <category>
+        <pattern>SANTIKA PREMIERE SLIP</pattern>
+        <template>
+            Santika Premiere Slipi:
+            [ul]
+                [li]Santika Premiere Slipi adalah salah satu hotel Santika Group di Indonesia.[/li]
+                [li]Lokasi Hotel: https://goo.gl/maps/ZetbFZYG9AFwEooY8[/li]
+                [li]Phone: +62-21-5361777[/li]
+                [li]Email: reservation@jakartapremiere.santika.com[/li]
+            [/ul]
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SANTIKA</pattern>
+        <template>
+            Santika Hotel dan Resorts adalah salah satu grup hotel terbesar di Indonesia. Dikelola oleh PT. Grahawita Santika, unit bisnis Kelompok Kompas Gramedia. PT. Grahawita Santika didirikan pada tanggal 22 Agustus 1981.
+        </template>
+    </category>
+    
+    <category>
+            <pattern>HALO _</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HALOO _</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HALLO _</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HELO _</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HALOO</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HALLO</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HELO</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HELLO _</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+            <pattern>HELLO</pattern>
+            <template>
+                <srai>HALO</srai>    
+            </template>
+    </category>
+
+    <category>
+        <pattern>HAI</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HAI _</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HAII</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HAII _</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>TEST</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>TES</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>BONJOUR</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>KONICHIWA</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>KONNICHIWA</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>ALOHA</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>KABAR</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PERMISI</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERMISI _</pattern>
+        <template>
+            <srai>HALO</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TIPE KAMAR</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TIPE KAMAR _</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>JENIS KAMAR</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>JENIS KAMAR _</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>KAMAR</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>KAMAR HOTEL _</pattern>
+        <template>
+            <srai>KAMAR HOTEL</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESERVASI _</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESAN</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MANA PESAN</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PESAN _</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MANA PESAN _</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MANA SALES</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>SALES</pattern>
+        <template>
+            <srai>RESERVASI</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>BAYAR _</pattern>
+        <template>
+            <srai>BAYAR</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>NIKAH</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>NIKAH _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA NIKAH</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA NIKAH _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA PAKET NIKAH</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA PAKET NIKAH _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>WEDDING</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>WEDDING _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA WEDDING</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA WEDDING _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA PAKET WEDDING</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA PAKET WEDDING _</pattern>
+        <template>
+            <srai>ACARA NIKAH</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RAPAT</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ACARA RAPAT</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RAPAT _</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RUANG RAPAT _</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RUANG MEETING</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RUANG MEETING _</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RUANG MEETINGNYA</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RUANG MEETINGNYA _</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MEETING ROOM</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MEETING ROOM _</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>INFORMASI MEETING ROOM</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>INFORMASI RUANG RAPAT</pattern>
+        <template>
+            <srai>RUANG RAPAT</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>TRANSPORT</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>TRANSPORT _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>TRANSPORTASI</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TRANSPORTASI _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MOBIL</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MOBIL _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>KENDARA _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOTEL BANDARA</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOTEL BANDARA _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA HOTEL BANDARA</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA HOTEL BANDARA _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERGI HOTEL BANDARA</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERGI HOTEL BANDARA _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>BANDARA HOTEL</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>BANDARA HOTEL _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA BANDARA HOTEL</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARGA BANDARA HOTEL _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERGI BANDARA HOTEL</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERGI BANDARA HOTEL _</pattern>
+        <template>
+            <srai>KENDARA</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MAKAN _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MINUM</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MINUM _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESTAURAN</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+        
+    <category>
+        <pattern>RESTAURAN _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESTAURANT</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESTAURANT _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESTORAN</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>RESTORAN _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>INFO MAKAN</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>INFO MAKAN _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MENU</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>MENU _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>SARAP</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>SARAP _</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>FASILITAS</pattern>
+        <template>
+            <srai>FASILITAS LAIN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>FASILITAS LAIN _</pattern>
+        <template>
+            <srai>FASILITAS LAIN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>FASILITAS HOTEL</pattern>
+        <template>
+            <srai>FASILITAS LAIN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>FASILITAS HOTEL _</pattern>
+        <template>
+            <srai>FASILITAS LAIN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>SANTIKA PREMIERE SLIP _</pattern>
+        <template>
+            <srai>SANTIKA PREMIERE SLIP</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HOTEL</pattern>
+        <template>
+            <srai>SANTIKA PREMIERE SLIP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>THIS IS AN EMPTY QUERY</pattern>
+        <template>
+            Maaf, input anda tidak dapat diterima.
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE PHONE NUMBER IS *</pattern>
+        <template>
+            Terima kasih, kontak anda telah tersimpan. Mohon tunggu kabar selanjutnya dari kami.
+        </template>
+    </category>
+
+    <category>
+        <pattern>THE EMAIL ADDRESS IS *</pattern>
+        <template>
+            Terima kasih, kontak anda telah tersimpan. Mohon tunggu kabar selanjutnya dari kami.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TELETUBBIES</pattern>
+        <template>
+            <srai>TELETABIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TINKYWINKY</pattern>
+        <template>
+            <srai>TELETABIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DIPSY</pattern>
+        <template>
+            <srai>TELETABIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LAALAA</pattern>
+        <template>
+            <srai>TELETABIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PO</pattern>
+        <template>
+            <srai>TELETABIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELETABIS</pattern>
+        <template>
+            Made By:
+            [ul]
+                [li]Aldric Leonardo[/li]
+                [li]Vionie Laorensa[/li]
+                [li]Matthew Evans Audric Rengkung[/li]
+                [li]James Christian Wira[/li]
+            [/ul]
+        </template>
+    </category>
+
+</aiml>

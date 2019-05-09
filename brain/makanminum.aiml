@@ -2,13 +2,41 @@
 <aiml>
 
     <category>
-        <pattern>MAKANAN DAN MINUMAN</pattern>
+        <pattern>MAKAN</pattern>
         <template>
             Hotel Santika Premiere menyediakan 2 Restaurant
-            @?
-                @-Harmoni Buffet-@
-                @-Yan Palace-@
-            ?@
+            [ul]
+                [li]Harmoni Buffet[/li]
+                [li]Yan Palace[/li]
+            [/ul]
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARMONI BUFFET</pattern>
+        <template>
+            Spesifikasi Restauran Harmoni Buffet adalah:
+            [ul]
+                [li]Di Harmony disediakan buffet untuk makanan tradisional, western, dan eastern.[/li]
+            [/ul]
+        </template>
+    </category>
+
+    <category>
+        <pattern>YAN PALACE</pattern>
+        <template>
+            Spesifikasi Restauran Yan Palace adalah:
+            [ul]
+                [li]Untuk Yan Palace dikhususkan untuk reservasi yang dapat langsung dilakukan saat datang ke restoran.[/li]
+                [li]Dibuka jam 12-2 siang untuk makan siang, dan jam 6 sore - 9 malam untuk makan malam.[/li]
+            [/ul]
+        </template>
+    </category>
+
+    <category>
+        <pattern>HARMONI</pattern>
+        <template>
+            <srai>HARMONI BUFFET</srai>    
         </template>
     </category>
 
@@ -20,9 +48,30 @@
     </category>
 
     <category>
+        <pattern>BUFFET</pattern>
+        <template>
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
         <pattern>BUFFET _</pattern>
         <template>
-            <srai>HARMONI BUFFET</srai>    
+            <srai>MAKAN</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>YAN</pattern>
+        <template>
+            <srai>YAN PALACE</srai>    
+        </template>
+    </category>
+
+    <category>
+        <pattern>PALACE</pattern>
+        <template>
+            <srai>YAN PALACE</srai>    
         </template>
     </category>
 
@@ -33,25 +82,4 @@
         </template>
     </category>
 
-    <category>
-        <pattern>HARMONI BUFFET</pattern>
-        <template>
-            Spesifikasi Restauran Harmoni BUffet adalah:
-            @?
-                @-Di Harmony disediakan buffet untuk makanan tradisional, western, dan eastern.-@
-            ?@
-        </template>
-    </category>
-
-    <category>
-        <pattern>YAN PALACE</pattern>
-        <template>
-            Spesifikasi Restauran Yan Palace adalah:
-            @?
-                @-Untuk Yan Palace dikhususkan untuk reservasi yang dapat langsung dilakukan saat datang ke restoran.-@
-                @-Dibuka jam 12-2 siang untuk makan siang, dan jam 6 sore - 9 malam untuk makan malam.-@
-            ?@
-        </template>
-    </category>
-    
 </aiml>
